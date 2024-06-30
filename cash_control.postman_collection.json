@@ -1,0 +1,406 @@
+{
+	"info": {
+		"_postman_id": "13854f0b-5822-44f1-8bfb-bcbbc80636b2",
+		"name": "cash_control",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33355227"
+	},
+	"item": [
+		{
+			"name": "category",
+			"item": [
+				{
+					"name": "Category",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://webservice-cash-control-server.vercel.app/category",
+							"protocol": "https",
+							"host": [
+								"webservice-cash-control-server",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzE5NzIzODM0LCJleHAiOjE3MTk4MTAyMzR9.c8pPIO_aE7EPcTSOZ5aPKxm68vk2VUcLSTsgByDpWts",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"wallet_name\": \"Ovo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://webservice-cash-control-server.vercel.app/insert-category",
+							"protocol": "https",
+							"host": [
+								"webservice-cash-control-server",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"insert-category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "category id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://webservice-cash-control-server.vercel.app/get-category/2",
+							"protocol": "https",
+							"host": [
+								"webservice-cash-control-server",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"get-category",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzE5NzIzODM0LCJleHAiOjE3MTk4MTAyMzR9.c8pPIO_aE7EPcTSOZ5aPKxm68vk2VUcLSTsgByDpWts",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"wallet_name\": \"flip\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://webservice-cash-control-server.vercel.app/update-category/3",
+							"protocol": "https",
+							"host": [
+								"webservice-cash-control-server",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"update-category",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "del by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzE5NzIzODM0LCJleHAiOjE3MTk4MTAyMzR9.c8pPIO_aE7EPcTSOZ5aPKxm68vk2VUcLSTsgByDpWts",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://webservice-cash-control-server.vercel.app/delete-category/3",
+							"protocol": "https",
+							"host": [
+								"webservice-cash-control-server",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"delete-category",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "Registration",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_name\": \"todos\",\r\n    \"email\": \"todos@gmail.com\",\r\n    \"password\": \"1qazxsw2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://webservice-cash-control-server.vercel.app/registration",
+							"protocol": "https",
+							"host": [
+								"webservice-cash-control-server",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"registration"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"usernameEmail\": \"todos\",\r\n    \"password\": \"1qazxsw2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://webservice-cash-control-server.vercel.app/login",
+							"protocol": "https",
+							"host": [
+								"webservice-cash-control-server",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "wallet",
+			"item": [
+				{
+					"name": "wallet",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://webservice-cash-control-server.vercel.app/wallet",
+							"protocol": "https",
+							"host": [
+								"webservice-cash-control-server",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"wallet"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "insert wallet",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzE5NzIzODM0LCJleHAiOjE3MTk4MTAyMzR9.c8pPIO_aE7EPcTSOZ5aPKxm68vk2VUcLSTsgByDpWts",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n    \"wallet_id\":5,\r\n    \"amount\":130000,\r\n    \"contact\":6285921240821\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://webservice-cash-control-server.vercel.app/insert-wallet",
+							"protocol": "https",
+							"host": [
+								"webservice-cash-control-server",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"insert-wallet"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update wallet",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzE5NzIzODM0LCJleHAiOjE3MTk4MTAyMzR9.c8pPIO_aE7EPcTSOZ5aPKxm68vk2VUcLSTsgByDpWts",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n    \"wallet_id\":2,\r\n    \"amount\":132040.39,\r\n    \"contact\":6285921240821\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://webservice-cash-control-server.vercel.app/update-wallet/1",
+							"protocol": "https",
+							"host": [
+								"webservice-cash-control-server",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"update-wallet",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get by id user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://webservice-cash-control-server.vercel.app/get-wallet-user/1",
+							"protocol": "https",
+							"host": [
+								"webservice-cash-control-server",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"get-wallet-user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "by wallet",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://webservice-cash-control-server.vercel.app/get-wallet/1",
+							"protocol": "https",
+							"host": [
+								"webservice-cash-control-server",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"get-wallet",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzE5NzIzODM0LCJleHAiOjE3MTk4MTAyMzR9.c8pPIO_aE7EPcTSOZ5aPKxm68vk2VUcLSTsgByDpWts",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://webservice-cash-control-server.vercel.app/delete-wallet/2",
+							"protocol": "https",
+							"host": [
+								"webservice-cash-control-server",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"delete-wallet",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

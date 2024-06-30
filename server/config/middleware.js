@@ -7,7 +7,7 @@ const configureMiddleware = (app) => {
     cors({
       origin: [
         "http://localhost:5500",
-        "https://AKT74.github.io",
+        "https://akt74.github.io",
       ],
       methods: ["GET", "POST", "PUT", "OPTIONS", "DELETE"],
       credentials: true,
