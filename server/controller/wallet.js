@@ -66,11 +66,11 @@ router.get("/wallet", async (req, res) => {
   
   router.post("/insert-wallet", verification, async (req, res) => {
     try {
-      const { wallet_id, amount, contact, user_id } = req.body;
+      const { category_id, amount, contact, user_id } = req.body;
   
       const { data, error } = await supabase
         .from("Wallet")
-        .insert({ wallet_id: wallet_id, amount: amount, contact: contact, user_id: user_id})
+        .insert({ category_id: category_id, amount: amount, contact: contact, user_id: user_id})
         .select("*")
         .order("id");
   
@@ -89,11 +89,11 @@ router.get("/wallet", async (req, res) => {
   router.put("/update-wallet/:id", verification, async (req, res) => {
     try {
       const walletId = req.params.id;
-      const { wallet_id, amount, contact } = req.body;
+      const { category_id, amount, contact } = req.body;
   
       const { data, error } = await supabase
         .from("Wallet")
-        .update({ wallet_id: wallet_id, amount: amount, contact: contact})
+        .update({ category_id: category_id, amount: amount, contact: contact})
         .eq("id", walletId)
         .select("*");
   
