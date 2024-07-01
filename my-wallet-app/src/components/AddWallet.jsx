@@ -40,7 +40,7 @@ const AddWallet = () => {
   const handleAdd = async () => {
     try {
       const response = await axios.post('https://webservice-cash-control-server.vercel.app/insert-wallet', {
-        wallet_id: walletId,
+        category_id: walletId,
         amount: parseFloat(amount),
         contact: account,
         user_id: userId,
