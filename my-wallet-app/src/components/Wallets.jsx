@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { jwtDecode } from 'jwt-decode';
-import { useNavigate } from 'react-router-dom';
 import './../styles/Wallets.css';
 
 const Wallets = () => {
@@ -32,8 +31,8 @@ const Wallets = () => {
       <h2>My Wallets</h2>
       {wallets.map((wallet) => (
         <div className="wallet" key={wallet.id}>
-          <span>{wallet.wallet_name}</span>
-          <span>{wallet.amount}</span>
+          <span>{wallet.Category.wallet_name}</span>
+          <span>{wallet.amount.toLocaleString()}</span>
           {/* <button className='infoBtn'>info</button> */}
         </div>
       ))}
