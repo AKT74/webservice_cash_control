@@ -31,7 +31,7 @@ router.get("/wallet", async (req, res) => {
       const userId = req.params.id;
   
       const { data, error } = await supabase
-        .from("Wallet, Category(*)")
+        .from("Wallet, Category(wallet_name)")
         .select("*")
         .eq("user_id", userId);
   
