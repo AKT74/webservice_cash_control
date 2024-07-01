@@ -66,11 +66,11 @@ router.get("/wallet", async (req, res) => {
   
   router.post("/insert-wallet", verification, async (req, res) => {
     try {
-      const { wallet_id, amount, contact } = req.body;
+      const { wallet_id, amount, contact, user_id } = req.body;
   
       const { data, error } = await supabase
         .from("Wallet")
-        .insert({ wallet_id: wallet_id, amount: amount, contact: contact})
+        .insert({ wallet_id: wallet_id, amount: amount, contact: contact, user_id: user_id})
         .select("*")
         .order("id");
   

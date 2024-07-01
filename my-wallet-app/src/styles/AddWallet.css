@@ -1,0 +1,19 @@
+.add-wallet-form {
+    padding: 20px;
+  }
+  
+  .add-wallet-form input {
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+  }
+  
+  .add-wallet-form button {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
