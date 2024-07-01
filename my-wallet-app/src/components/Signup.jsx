@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 import './../styles/Signup.css';
 
 const Signup = () => {
@@ -43,7 +44,7 @@ const Signup = () => {
         onChange={(e) => setPassword(e.target.value)}
       />
       <button onClick={handleSignup}>Signup</button>
-      <h5>have an account ?<a href="Login.jsx"> Log in here</a></h5>
+      <h5>have an account ?<Link to="/"> Log in here</Link></h5>
 
     </div>
   );

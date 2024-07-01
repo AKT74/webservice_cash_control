@@ -1,27 +1,39 @@
 .wallets {
-    padding: 20px;
-  }
-  
-  .wallet {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-  }
-  
-  .wallet button {
-    background-color: blue;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-  }
-  
-  .add-wallet {
-    margin-top: 20px;
-    background-color: green;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-  }
-  
+  padding: 20px;
+}
+
+.wallet {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.wallet button {
+  background-color: blue;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.wallet span {
+  color: #ffffff;
+}
+
+.add-wallet {
+  margin-top: 20px;
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.logout {
+  margin-top: 20px;
+  background-color: rgb(187, 0, 0);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}

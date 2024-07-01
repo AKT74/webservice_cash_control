@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { jwtDecode } from "jwt-decode";
+import { useNavigate } from 'react-router-dom';
 import './../styles/AddWallet.css';
 
 const AddWallet = () => {
@@ -10,6 +11,8 @@ const AddWallet = () => {
   const [token, setToken] = useState(null);
   const [userId, setUserId] = useState(null);
   const [category, setCategory] = useState([]);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (localStorage.getItem('token')){
@@ -47,6 +50,8 @@ const AddWallet = () => {
         },
       
       });
+
+      navigate('/wallets');
       console.log(response.data);
     } catch (error) {
       console.error(error);

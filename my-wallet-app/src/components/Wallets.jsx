@@ -2,29 +2,29 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { jwtDecode } from 'jwt-decode';
+import { useNavigate } from 'react-router-dom';
 import './../styles/Wallets.css';
 
 const Wallets = () => {
   const [wallets, setWallets] = useState([]);
-  const [userId, setUserId] = useState(null);
 
   useEffect(() => {
-    if (!localStorage.getItem('token')) {
+    if (localStorage.getItem('token')) {
       const decoded = jwtDecode(localStorage.getItem('token'));
-      setUserId(decoded.id);
-    }
+    
 
     const fetchWallets = async () => {
       try {
-        const response = await axios.get(`https://webservice-cash-control-server.vercel.app/get-wallet-user/${userId}`);
+        const response = await axios.get(`https://webservice-cash-control-server.vercel.app/get-wallet-user/${decoded.id}`);
         setWallets(response.data);
         console.log(response.data);
       } catch (error) {
         console.error(error);
       }
     };
-
+    
     fetchWallets();
+  }
   }, []);
 
   return (
@@ -34,11 +34,22 @@ const Wallets = () => {
         <div className="wallet" key={wallet.id}>
           <span>{wallet.wallet_name}</span>
           <span>{wallet.amount}</span>
-          <button>Edit</button>
+          {/* <button className='infoBtn'>info</button> */}
         </div>
       ))}
-      <Link to={"/add-wallet"} className="add-wallet">Add Wallet</Link>
+      <div><Link to={"/add-wallet"} className="add-wallet">Add Wallet</Link></div>
+      <div><Link to={"/"} className="logout">Logout</Link></div>
+      <div class="nav-bar">
+            <div class="nav-icon"></div>
+            <div class="nav-icon"></div>
+            <div class="nav-icon active"></div>
+            <div class="nav-icon"></div>
+            <div class="nav-icon"></div>
+        </div>
     </div>
+    
+
+    
   );
 };
 
